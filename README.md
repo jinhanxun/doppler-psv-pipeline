@@ -20,16 +20,12 @@ Outputs include **annotated images** with detected PSV points and **CSV tables**
 ## 🗂 Repository structure
 ```
 doppler-psv-pipeline/
-├─ pig_dataprocess_auto.py        # main script (your provided file)
+├─ pig_dataprocess_auto.py    
 ├─ README.md
 ├─ requirements.txt
 ├─ LICENSE
-├─ .gitignore
-└─ examples/
-   └─ images/                     # put a few example JPG/PNG images here (optional)
+└─ example_images
 ```
-> Feel free to rename the script to `psv_pipeline.py` later; keeping your original filename for now.
-
 ---
 
 ## 🚀 Quick start
@@ -47,10 +43,6 @@ doppler-psv-pipeline/
    python pig_dataprocess_auto.py
    ```
    By default the script reads images from a configured input folder and writes **annotated images** and **CSV files** to an output folder.  
-   (If your current version uses constants at the top of the file—e.g., `INPUT_FOLDER`, `OUTPUT_FOLDER`, `TARGET_WIDTH`, `BAND_WIDTH`, `DIST_MIN`, `PROMINENCE_FACTOR`, `HEIGHT_FACTOR`, `BRIGHTNESS_THRESHOLD`, etc.—adjust them there.)
-
-> **Tip:** If you'd like a CLI with flags (e.g., `--input`, `--output`), I can refactor the script into a module and add an argparse interface.
-
 ---
 
 ## ⚙️ Configuration knobs
@@ -61,7 +53,6 @@ Common parameters (found near the top of the script):
 - `PROMINENCE_FACTOR`, `HEIGHT_FACTOR` – adaptive thresholds for `find_peaks`
 - `BRIGHTNESS_THRESHOLD` – ignore very dark pixels/noise in the spectral region
 - (plus any of your `INPUT_FOLDER`, `OUTPUT_FOLDER`, cropping and scale settings)
-
 ---
 
 ## 📦 Outputs
@@ -77,14 +68,5 @@ The script prints a progress log in the terminal and summarizes what was saved.
 
 ---
 
-## ✅ Validation
-The method has been validated on multiple independent batches of ultrasound images to confirm **consistency** and **robustness**. For manuscript use, add a short “Validation” subsection describing datasets, inter/intra‑batch results, and any inter‑operator checks if applicable.
-
----
-
-## 🧪 Reproducibility notes
-- Fix `TARGET_WIDTH` and all thresholds/scale markers for a given dataset.
-- Keep a small `examples/images/` set to sanity‑check future changes.
-- Use `DEBUG = True` in the script to visualize intermediate steps (if provided).
 
 
