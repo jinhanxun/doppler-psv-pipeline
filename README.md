@@ -5,10 +5,6 @@ This repository contains a lightweight Python pipeline to quantify **peak systol
 It standardizes image scale, isolates the trace via user‑guided cropping, converts to grayscale, performs **vertical intensity averaging**, and detects cycle‑wise PSV using `scipy.signal.find_peaks`.  
 Outputs include **annotated images** with detected PSV points and **CSV tables** with pixel coordinates, calibrated velocities, and per‑cycle summary statistics.
 
-> Paper/Methods blurb you provided is included below for convenience (you can also paste into your manuscript):
->
-> *We developed an automated Python pipeline to quantify peak systolic velocity (PSV) from Doppler ultrasound images. Each image was first rescaled to a uniform width, followed by user-guided cropping to isolate the spectral Doppler trace. The workflow then converted the region of interest to grayscale, performed vertical intensity averaging, and applied adaptive peak detection using the scipy.signal.find_peaks function. For each cardiac cycle, the algorithm identified the top-most bright pixel along the spectral envelope and converted it to physical velocity. The pipeline generated both visual and quantitative outputs: annotated images highlighting detected PSV points and structured CSV files containing pixel coordinates, calibrated PSV values, and cycle-wise summary statistics. Validation was performed by processing multiple independent batches of ultrasound images, confirming consistency and robustness of the automated measurements. Importantly, the pipeline requires only minimal user input (scale markers and cropping boundaries) and eliminates subjective bias in manual PSV estimation. A full description of algorithm design, validation procedures, and implementation details is provided in the Supplementary Methods.*
-
 ---
 
 ## ✨ Features
