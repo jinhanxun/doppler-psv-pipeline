@@ -14,7 +14,7 @@ PROMINENCE_FACTOR = 1.0
 HEIGHT_FACTOR = 0.3
 TARGET_WIDTH = 1024
 BRIGHTNESS_THRESHOLD = 5
-INPUT_FOLDER = "./images"
+INPUT_FOLDER = "./example_images"
 OUTPUT_FOLDER = "./output"
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
